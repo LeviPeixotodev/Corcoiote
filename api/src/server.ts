@@ -1,8 +1,10 @@
 import express from 'express';
-import routerUsers from './routes/user.route.ts';
+import userRouter from './routes/user.route.ts';
 
-const app = express();
+const server = express();
 
-app.use('/users', routerUsers);
+server.use(express.json());
 
-app.listen(3000);
+server.use('/users', userRouter);
+
+server.listen(3000);

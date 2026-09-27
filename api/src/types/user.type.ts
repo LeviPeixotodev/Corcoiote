@@ -4,12 +4,6 @@ export type User = {
   email: string;
   password: string;
 }
-export type CreateUser = Omit<User = id>{}
 
-export function findAllUsers(){
-
-}
-
-export function insertUser(){
-
-}
+export type CreateUser = Omit<User, 'id'>;
+export type UpdateUser = Partial<CreateUser>;
