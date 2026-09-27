@@ -1,6 +1,6 @@
 # Corcoiote API 🚀
 
-API backend desenvolvida em **TypeScript, Node.js, **, estruturada com uma arquitetura limpa e modular (Controllers, Services, Routes e Mocks). O projeto já conta com configuração para Docker, variáveis de ambiente e está otimizado para o ambiente de desenvolvimento no **GitHub Codespaces**.
+API backend desenvolvida em **TypeScript, Node.js, Prisma ORM, Docker** estruturada com uma arquitetura limpa e modular (Controllers, Services, Routes e Mocks Temporários). O projeto já conta com configuração para Docker, variáveis de ambiente e está otimizado para o ambiente de desenvolvimento no **GitHub Codespaces**.
 
 ---
 
@@ -9,7 +9,7 @@ API backend desenvolvida em **TypeScript, Node.js, **, estruturada com uma arqui
 - **Linguagem:** TypeScript
 - **Ambiente:** Node.js, Express
 - **ORM:** Prisma ORM
-- **Containerização:** Docker, image, Docker Compose
+- **Containerização:** Docker, Docker Compose
 - **Banco de Dados:** PostgreSQL
 
 ---
