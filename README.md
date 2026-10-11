@@ -4,7 +4,7 @@ API backend desenvolvida em **TypeScript, Node.js, Prisma ORM, Docker** estrutur
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas
+## Tecnologias e Ferramentas
 
 - **Linguagem:** TypeScript
 - **Ambiente:** Node.js, Express
@@ -32,6 +32,7 @@ src/
 ## ⚙️ Variáveis de Ambiente (`.env`)
 
 Crie um arquivo `.env` na raiz do projeto baseando-se no exemplo abaixo (`.env.example`):
+
 ---
 
 ## 🐳 Rodando com Docker Compose
@@ -46,33 +47,32 @@ docker compose up -d
 docker compose down
 ```
 
----
-
-## ☁️ Rodando o projeto
+## Rodando o projeto:
 
 Este repositório possui suporte nativo ao **Codespaces**. Ao abrir o projeto no Codespaces:
 
 1. As dependências serão instaladas automaticamente (ou execute `npm install`).
 2. Crie e configure o seu arquivo `.env` usando o `.env.example` como base.
+
 3. Execute as migrações do Prisma para estruturar o banco de dados:
+
 ```bash
 npx prisma migrate dev
 ```
 
 
 4. Inicie o servidor em modo de desenvolvimento:
+
 ```bash
 npm run dev
 ```
 
 
 
----
+## Melhorias Futuras
 
-## 🔮 Melhorias Futuras
-
-* [ ] Implementação do Frontend (Consumo da API).
-* [ ] Conexão definitiva e migrações do Banco de Dados (substituindo mocks remanescentes).
-* [ ] Testes unitários e de integração (Jest / Supertest).
-* [ ] Autenticação e Autorização (JWT / OAuth).
-* [ ] Documentação de rotas com Swagger / OpenAPI.
+* [ ] Implementação do Frontend para consumo da API (EM ANDAMENTO...🛠️)
+* [ ] Conexão definitiva e migrações do Banco de Dados substituindo os mocks remanescentes
+* [ ] Testes unitários e de integração (Jest / Supertest)
+* [ ] Autenticação e Autorização JWT.
+* [ ] Documentação de rotas com Swagger.
