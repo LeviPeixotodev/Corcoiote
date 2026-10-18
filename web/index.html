@@ -74,8 +74,27 @@
                 <tbody>
                     <tr>
                         <td>{invoices[0].customer.name}</td>
+                        <td>{invoices[0].amount}</td>
+                        <td>{invoices[0].issueDate}</td>
+                        <td>{invoices[0].dueDate}</td>
+                        <td>{invoices[0].status}</td>
+                    </tr>
+                    <tr>
+                        <td>{invoices[1].customer.name}</td>
+                        <td>{invoices[1].amount}</td>
+                        <td>{invoices[1].issueDate}</td>
+                        <td>{invoices[1].dueDate}</td>
+                        <td>{invoices[1].status}</td>
+                    </tr>
+                    <tr>
+                        <td>{invoices[2].customer.name}</td>
+                        <td>{invoices[2].amount}</td>
+                        <td>{invoices[2].issueDate}</td>
+                        <td>{invoices[2].dueDate}</td>
+                        <td>{invoices[2].status}</td>
                     </tr>
                 </tbody>
+            
             </table>;
         }
 
@@ -84,7 +103,6 @@
         }
 
         root.render(<App />);
-
     </script>
 
 </body>
