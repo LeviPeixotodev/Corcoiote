@@ -60,6 +60,15 @@
         }
         ]
 
+        function Row(props){
+            return  <tr>
+                        <td>{invoices[props.position].customer.name}</td>
+                        <td>{invoices[props.position].amount}</td>
+                        <td>{invoices[props.position].issueDate}</td>
+                        <td>{invoices[props.position].dueDate}</td>
+                        <td>{invoices[props.position].status}</td>
+                    </tr>
+        }
         function Table() {
             return <table>
                 <thead>
@@ -72,27 +81,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>{invoices[0].customer.name}</td>
-                        <td>{invoices[0].amount}</td>
-                        <td>{invoices[0].issueDate}</td>
-                        <td>{invoices[0].dueDate}</td>
-                        <td>{invoices[0].status}</td>
-                    </tr>
-                    <tr>
-                        <td>{invoices[1].customer.name}</td>
-                        <td>{invoices[1].amount}</td>
-                        <td>{invoices[1].issueDate}</td>
-                        <td>{invoices[1].dueDate}</td>
-                        <td>{invoices[1].status}</td>
-                    </tr>
-                    <tr>
-                        <td>{invoices[2].customer.name}</td>
-                        <td>{invoices[2].amount}</td>
-                        <td>{invoices[2].issueDate}</td>
-                        <td>{invoices[2].dueDate}</td>
-                        <td>{invoices[2].status}</td>
-                    </tr>
+                <Row position={0}/>
+                <Row position={1}/>
+                <Row position={2}/>
                 </tbody>
             
             </table>;
