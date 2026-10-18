@@ -1,104 +1,92 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Corcoite</title>
-    </head>
 
-    <body>
+<head>
+    <meta charset="UTF-8" />
+    <title>Corcoite</title>
+</head>
 
-        <div></div>
+<body>
+
+    <div></div>
     <!-- importando react e babel.js -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-        <script type='text/babel'>
-            const container = document.querySelector('div');
+    <script type='text/babel'>
+        const container = document.querySelector('div');
 
-            const root = ReactDOM.createRoot(container);
+        const root = ReactDOM.createRoot(container);
 
-            const invoices =[{
+        const invoices = [{
 
-    
+
+            id: 1,
+            amount: 125037,
+            status: 'paid',
+            issueDate: '2026-09-15',
+            dueDate: '2026-10-16',
+            customer: {
                 id: 1,
-                amount: 125037,
-                status:'paid',
-                issueDate:'2026-09-15',
-                dueDate: '2026-10-16',
-                customer: {
-                    id:1,
-                    name: 'Spori soluções',
-                    email: 'Spori@org.com.br',
-                }
-            }, 
-    {
-                id: 2,
-                amount: 192127,
-                status:'peding',
-                issueDate:'2026-09-15',
-                dueDate: '2026-10-16',
-                customer: {
-                    id:2,
-                    name: 'Construtora Meridiano',
-                    email: 'comercial@meridiano.com.br',
-                }
-        },
-            {
-                id: 3,
-                amount: 63231,
-                status:'peding',
-                issueDate:'2026-09-12',
-                dueDate: '2026-10-12',
-                customer: {
-                    id:3,
-                    name: 'Mecanica Elma Maria',
-                    email: 'ElmaMaria12@gmail.com',
-                }
+                name: 'Spori soluções',
+                email: 'Spori@org.com.br',
             }
-]
-    function Table() {
-        return 
-        <table> 
-            <thead> 
-                     <tr>
+        },
+        {
+            id: 2,
+            amount: 192127,
+            status: 'peding',
+            issueDate: '2026-09-15',
+            dueDate: '2026-10-16',
+            customer: {
+                id: 2,
+                name: 'Construtora Meridiano',
+                email: 'comercial@meridiano.com.br',
+            }
+        },
+        {
+            id: 3,
+            amount: 63231,
+            status: 'peding',
+            issueDate: '2026-09-12',
+            dueDate: '2026-10-12',
+            customer: {
+                id: 3,
+                name: 'Mecanica Elma Maria',
+                email: 'ElmaMaria12@gmail.com',
+            }
+        }
+        ]
+
+        function Table() {
+            return <table>
+                <thead>
+                    <tr>
                         <th>Cliente</th>
                         <th>Valor</th>
                         <th>Emissão</th>
                         <th>Vencimento</th>
                         <th>Situação</th>
                     </tr>
-            </thead>
-        </table>;
-    }
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{invoices[0].customer.name}</td>
+                    </tr>
+                </tbody>
+            </table>;
+        }
 
-  function App() {
-        return <Table/>;
-    }
+        function App() {
+            return <Table />;
+        }
 
+        root.render(<App />);
 
+    </script>
 
-     const Title = () => {
-                            return <h1>Corcoiote</h1>
-    };  
-     const Paragraph = () => {
-                                return <p>Bem vindo ao curso de React.</p>;
-    };
-    function App() {
-        return <>
-        <Title/>
-        <Paragraph/>
-        </>;
-    }
-            root.render(
-                    <>
-                    <Title/>
-                    <Paragraph/>
-                    </> );
-
-        </script>
-
-    </body>
+</body>
 
 </html>
