@@ -60,14 +60,14 @@
         }
         ]
 
-        function Row(props){
-            return  <tr>
-                        <td>{invoices[props.position].customer.name}</td>
-                        <td>{invoices[props.position].amount}</td>
-                        <td>{invoices[props.position].issueDate}</td>
-                        <td>{invoices[props.position].dueDate}</td>
-                        <td>{invoices[props.position].status}</td>
-                    </tr>
+        function Row(props) {
+            return <tr>
+                <td>{props.data.customer.name}</td>
+                <td>{props.data.amount}</td>
+                <td>{props.data.issueDate}</td>
+                <td>{props.data.dueDate}</td>
+                <td>{props.data.status}</td>
+            </tr>
         }
         function Table() {
             return <table>
@@ -81,11 +81,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                <Row position={0}/>
-                <Row position={1}/>
-                <Row position={2}/>
+                    {invoices.map((invoice) => {
+                        return <Row data= {invoice} />
+
+                    })}
                 </tbody>
-            
+
             </table>;
         }
 
