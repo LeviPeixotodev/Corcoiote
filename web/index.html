@@ -19,6 +19,66 @@
 
             const root = ReactDOM.createRoot(container);
 
+            const invoices =[{
+
+    
+                id: 1,
+                amount: 125037,
+                status:'paid',
+                issueDate:'2026-09-15',
+                dueDate: '2026-10-16',
+                customer: {
+                    id:1,
+                    name: 'Spori soluções',
+                    email: 'Spori@org.com.br',
+                }
+            }, 
+    {
+                id: 2,
+                amount: 192127,
+                status:'peding',
+                issueDate:'2026-09-15',
+                dueDate: '2026-10-16',
+                customer: {
+                    id:2,
+                    name: 'Construtora Meridiano',
+                    email: 'comercial@meridiano.com.br',
+                }
+        },
+            {
+                id: 3,
+                amount: 63231,
+                status:'peding',
+                issueDate:'2026-09-12',
+                dueDate: '2026-10-12',
+                customer: {
+                    id:3,
+                    name: 'Mecanica Elma Maria',
+                    email: 'ElmaMaria12@gmail.com',
+                }
+            }
+]
+    function Table() {
+        return 
+        <table> 
+            <thead> 
+                     <tr>
+                        <th>Cliente</th>
+                        <th>Valor</th>
+                        <th>Emissão</th>
+                        <th>Vencimento</th>
+                        <th>Situação</th>
+                    </tr>
+            </thead>
+        </table>;
+    }
+
+  function App() {
+        return <Table/>;
+    }
+
+
+
      const Title = () => {
                             return <h1>Corcoiote</h1>
     };  
