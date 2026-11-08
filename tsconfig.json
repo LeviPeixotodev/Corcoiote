@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "lib":["ESNext", "DOM"],
+        "jsx": "react-jsx",
+        "erasableSyntaxOnly": true,
+        "noEmit": true
+               }
+}
